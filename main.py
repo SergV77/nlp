@@ -40,18 +40,16 @@ def requestApi():
         conceptId.append(out['idConcept'])
         conceptCh.append(out['chance'])
 
-    diagnosis2 = handlerConcept(conceptId)
+    diagnosis = handlerConcept(conceptId)
 
+    result = {}
+    for keys, values in diagnosis.items():
+        result[keys] = round(values, 2)
 
-
-
-
-
-
-
-
-    result = {'Диагноз2 ': diagnosis2 }
     return result
+
+
+
 
 
 

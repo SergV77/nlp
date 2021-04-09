@@ -32,12 +32,17 @@ def handlerConcept(conceptId):
     xTest = changeSetTo01(conceptIndexes, maxConceptsCount)
 
     out = model.predict(xTest)
-    print(out)
-    print(np.argmax(out))
+    #print(out)
+    #print(np.argmax(out))
+    data = list(out[0])
+    dic = {}
+    for num in data:
+        if ((num * 100) > 1):
+            dic[classes[data.index(num)]] = num * 100
 
-    print('Распознала сеть - ', classes[np.argmax(out)])
 
-    diagnosis1 = classes[np.argmax(out)]
+    #print('Распознала сеть - ', classes[np.argmax(out)])
+    #diagnosis1 = classes[np.argmax(out)]
 
 
-    return diagnosis1 #diagnosis2
+    return dic #diagnosis2
