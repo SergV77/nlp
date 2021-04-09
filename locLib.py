@@ -8,6 +8,7 @@ import numpy as np # Библиотека работы с массивами
 import matplotlib.pyplot as plt # Отрисовка изображений
 import requests
 import json
+import pickle
 
 from tensorflow.keras.models import Sequential # НС прямого распространения
 from tensorflow.keras.layers import Dense, Activation, Dropout, SpatialDropout1D, BatchNormalization, Embedding, Flatten # Основные слои

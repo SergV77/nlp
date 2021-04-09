@@ -1,34 +1,6 @@
 #!flask/bin/python
 from locLib import *
 
-def createVocabulary(allConcepts):
-    '''
-    createVocabulary - Функция создание словаря концептов по частоте появления
-      вход:
-        allConcepts - список концептов
-      выход:
-        словарь концептов
-    '''
-
-    wCount = dict.fromkeys(allConcepts, 0)
-
-    for concept in allConcepts:
-        wCount[concept] += 1
-
-    conceptList = list(wCount.items())
-    conceptList.sort(key=lambda i: i[1], reverse=1)
-
-    sortedConcepts = []
-
-    for concept in conceptList:
-        sortedConcepts.append(concept[0])
-
-    conceptIndexes = dict.fromkeys(allConcepts, 0)
-    for concept in conceptIndexes.keys():
-        conceptIndexes[concept] = sortedConcepts.index(concept) + 1
-
-    return conceptIndexes
-
 
 def concept2Indexes(concepts, vocabulary, maxConceptCount):
     '''

@@ -1,4 +1,6 @@
 #!flask/bin/python
 
 from locLib import *
-from locFunction import *
+
+def loadModele ():
+    return load_model('models/model_best290321.hdf5')
