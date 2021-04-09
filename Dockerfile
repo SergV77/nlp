@@ -2,7 +2,7 @@ FROM python:3.7
 
 COPY requirements.txt /app/requirements.txt
 
-ADD odbcinst.ini /etc/odbcinst.ini
+#ADD odbcinst.ini /etc/odbcinst.ini
 RUN apt-get update
 RUN apt-get install -y tdsodbc unixodbc-dev
 RUN apt install unixodbc-bin -y
