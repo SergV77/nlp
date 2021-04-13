@@ -16,4 +16,6 @@ RUN pip install -r requirements.txt
 COPY . /app
 RUN ls -l
 RUN pwd
+RUN python3 --version
+RUN -e main.py
 CMD [ "python3", "main.py" ]
