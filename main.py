@@ -54,4 +54,4 @@ def requestApi():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='localhost', port=8088)
+    app.run(port=8088)
