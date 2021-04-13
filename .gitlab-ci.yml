@@ -1,8 +1,8 @@
 image: docker:stable
 variables:
     PROJECT: "nlp"
-    KEYS_DEV: "-p 127.0.0.1:9035:8088"
-    KEYS_PROD: "-p 127.0.0.1:9035:8088"
+    KEYS_DEV: "-p 127.0.0.1:9035:5000"
+    KEYS_PROD: "-p 127.0.0.1:9035:5000"
 
 include: 
   - project: 'root/template-gitlab'
