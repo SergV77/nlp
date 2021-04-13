@@ -19,7 +19,7 @@ from tensorflow.keras.models import load_model # загрузка сохране
 from tensorflow.keras.preprocessing.sequence import pad_sequences # Модуль для возврата списка дополненных последовательностей
 
 #from keras.utils import plot_model # Построение графика модели и сохранене в файле
-from keras.callbacks import ModelCheckpoint # Модуль для работы с колбэками (сохранение наилучших результатов)
+#from keras.callbacks import ModelCheckpoint # Модуль для работы с колбэками (сохранение наилучших результатов)
 
 from sklearn.preprocessing import LabelEncoder, StandardScaler # Функции для нормализации данных
 from sklearn import preprocessing # Пакет предварительной обработки данных
