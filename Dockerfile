@@ -14,5 +14,5 @@ RUN export PYTHONPATH=/usr/bin/python
 RUN pip install -r requirements.txt
 
 COPY . /app
-
-CMD [ "python3", "main.py" ]
+RUN ls -l
+CMD [ "python3", "./main.py" ]
