@@ -1,5 +1,5 @@
 FROM python:3.7
-
+EXPOSE 8088
 COPY requirements.txt /app/requirements.txt
 
 #ADD odbcinst.ini /etc/odbcinst.ini
@@ -15,4 +15,4 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-CMD [ "python", "main.py" ]
+CMD [ "python3", "main.py" ]
