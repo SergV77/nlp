@@ -1,5 +1,5 @@
 FROM python:3.7
-EXPOSE 8088
+EXPOSE 5000
 COPY requirements.txt /app/requirements.txt
 
 #ADD odbcinst.ini /etc/odbcinst.ini
