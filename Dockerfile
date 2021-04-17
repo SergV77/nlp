@@ -1,12 +1,16 @@
-FROM python:3.7
-EXPOSE 5000
-COPY requirements.txt /app/requirements.txt
+#FROM python:3.7
+#EXPOSE 5000
+#COPY requirements.txt /app/requirements.txt
 
 #ADD odbcinst.ini /etc/odbcinst.ini
-RUN apt-get update
-RUN apt-get install -y tdsodbc unixodbc-dev
-RUN apt install unixodbc-bin -y
-RUN apt-get clean -y
+#RUN apt-get update
+#RUN apt-get install -y tdsodbc unixodbc-dev
+#RUN apt install unixodbc-bin -y
+#RUN apt-get clean -y
+
+FROM gw000/keras-full:2.1.4
+
+COPY requirements.txt /app/requirements.txt
 
 WORKDIR /app
 
