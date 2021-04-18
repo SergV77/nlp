@@ -36,18 +36,10 @@
 
 
 
-FROM python:3.5
+FROM amancevice/pandas:1.2.4
 
-MAINTAINER Julien Maupetit <julien@tailordev.fr>
+COPY requirements.txt /app/requirements.txt
 
-ENV PYTHONUNBUFFERED 1
-
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-        libatlas-base-dev gfortran
-
-RUN mkdir -p /opt/pandas/build/
-
-COPY requirements.txt /opt/pandas/build/requirements.txt
+WORKDIR /app
 
 RUN pip install -r /opt/pandas/build/requirements.txt
