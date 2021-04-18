@@ -10,8 +10,10 @@
 
 FROM gw000/keras-full:latest
 
+USER root
+
 #ADD odbcinst.ini /etc/odbcinst.ini
-#RUN apt-get update
+RUN apt-get update
 RUN apt-get upgrade
 #RUN apt-get install -y tdsodbc unixodbc-dev
 #RUN apt install unixodbc-bin -y
