@@ -8,7 +8,7 @@
 #RUN apt install unixodbc-bin -y
 #RUN apt-get clean -y
 
-FROM gw000/keras-full:2.1.4
+FROM gw000/keras-full:latest
 
 COPY requirements.txt /app/requirements.txt
 
