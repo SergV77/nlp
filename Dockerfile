@@ -44,6 +44,8 @@ WORKDIR /app
 
 RUN pip install -r requirements.txt
 
+COPY . /app
+
 RUN pwd
 RUN python3 --version
 CMD [ "python3", "main.py" ]
