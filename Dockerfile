@@ -8,7 +8,7 @@ WORKDIR /app
 #RUN python -m spacy download ru_core_news_lg
 COPY . /app
 
-RUN ls
+RUN ls app
 
 RUN pwd
 RUN python3 --version
