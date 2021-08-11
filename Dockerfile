@@ -1,15 +1,10 @@
 FROM python:3
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-#COPY requirements.txt /app/requirements.txt
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
-#RUN pip install -r requirements.txt
-#RUN python -m spacy download ru_core_news_lg
-COPY /app/. .
+COPY . .
 
-RUN ls
-
-RUN pwd
-RUN python3 --version
-CMD [ "python3", "streamlit_app.py" ]
+CMD [ "python", "streamlit_app.py" ]
