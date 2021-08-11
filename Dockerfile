@@ -1,6 +1,6 @@
 FROM amancevice/pandas:1.2.4
 
-COPY requirements.txt /app/requirements.txt
+#COPY requirements.txt /app/requirements.txt
 
 WORKDIR /app
 
