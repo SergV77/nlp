@@ -1,4 +1,4 @@
-FROM amancevice/pandas:1.2.4
+FROM python:3
 
 COPY requirements.txt /app/requirements.txt
 
