@@ -1,13 +1,13 @@
 FROM python:3
 
-WORKDIR /
+WORKDIR /app
 
 #COPY requirements.txt /app/requirements.txt
 
 #RUN pip install -r requirements.txt
 #RUN python -m spacy download ru_core_news_lg
-COPY . /app
+COPY . .
 
 RUN pwd
 RUN python3 --version
-CMD [ "python3", "app/streamlit_app.py" ]
+CMD [ "python3", "streamlit_app.py" ]
