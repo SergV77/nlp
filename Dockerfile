@@ -6,5 +6,6 @@ COPY app/requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app/. .
+RUN ls site-packages
 
 CMD [ "python", "streamlit_app.py" ]
