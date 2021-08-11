@@ -4,7 +4,7 @@ FROM python:3
 
 WORKDIR /app
 
-RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt
 RUN python -m spacy download ru_core_news_lg
 COPY . /app
 
