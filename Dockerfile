@@ -1,11 +1,13 @@
-FROM amancevice/pandas:1.2.4
+FROM python:3.8
 
 WORKDIR /app
 
 COPY requirements.txt ./
 RUN pip install -r requirements.txt
 
-COPY . /app
+COPY app app
 
 RUN pwd
-CMD [ "python3", "run.py" ]
+
+EXPOSE 5000
+ENTRYPOINT ["python3", "run.py"]
