@@ -1,4 +1,4 @@
-FROM python:3
+FROM amancevice/pandas:1.2.4
 
 WORKDIR /usr/src/app
 
