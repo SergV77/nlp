@@ -4,9 +4,9 @@ from .forms import ParsForm
 
 import spacy
 from spacy import displacy
-# from flaskext.markdown import Markdown
+from flaskext.markdown import Markdown
 
-# Markdown(app)
+Markdown(app)
 HTML_WRAPPER = """<div style="overflow-x: auto; border: 1px solid #e6e9ef; border-radius: 0.25rem; padding: 1rem">{}</div>"""
 
 nlp = spacy.load("ru_core_news_lg")
