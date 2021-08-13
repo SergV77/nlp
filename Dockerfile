@@ -1,11 +1,17 @@
-FROM python:3.8
+FROM ubuntu:16.04
 
-WORKDIR /app
+RUN apt-get update -y \
+    apt-get install -y python==3.8 python3-pip python3-dev
 
-COPY . .
+COPY ./requirements.txt /requirements.txt
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /
 
-EXPOSE 5000
-ENTRYPOINT ["python3", "./run.py"]
+RUN pip3 install -r requirements.txt
+
+COPY ./
+
+ENTRYPOINT ["python3"]
+
+CMD ["app/app.py"]
+
