@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 RUN apt-get update -y \
-    apt-get install -y python==3.8 python3-pip python3-dev
+    apt-get install -y python==3.8
 
 COPY ./requirements.txt /requirements.txt
 
