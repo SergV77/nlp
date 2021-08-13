@@ -6,5 +6,5 @@ variables:
 
 include: 
   - project: 'root/template-gitlab'
-    ref: dev
+    ref: master
     file: '/template-gitlab-ci.yml'
