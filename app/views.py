@@ -6,7 +6,7 @@ from settings import *
 
 HTML_WRAPPER = """<div style="overflow-x: auto; border: 1px solid #e6e9ef; border-radius: 0.25rem; padding: 1rem">{}</div>"""
 
-nlp = spacy.load("ru_core_news_md")
+# nlp = spacy.load("ru_core_news_md")
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -17,11 +17,12 @@ def index():
     options = {'compact': True, 'font': "Tahoma"}
     if form.validate_on_submit():
         text = form.text.data
-        doc = nlp(text)
-        spans = list(doc.sents)
-        html = displacy.render(spans, style="dep", options=options, page=True)
-        html = html.replace("\n\n", "\n")
-        result = HTML_WRAPPER.format(html)
+        # doc = nlp(text)
+        # spans = list(doc.sents)
+        # html = displacy.render(spans, style="dep", options=options, page=True)
+        # html = html.replace("\n\n", "\n")
+        # result = HTML_WRAPPER.format(html)
+        result = text
 
     return render_template("index.html", form=form, text=text, result=result)
 
