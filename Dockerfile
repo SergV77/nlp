@@ -1,4 +1,7 @@
-FROM python:3.8-alpine
+FROM debian
+
+RUN apt-get update -y && apt-get install python3-pip -y && pip3 install pip --upgrade && apt-get clean
+
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
