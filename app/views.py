@@ -6,7 +6,7 @@ from settings import *
 
 HTML_WRAPPER = """<div style="overflow-x: auto; border: 1px solid #e6e9ef; border-radius: 0.25rem; padding: 1rem">{}</div>"""
 
-nlp = spacy.load("ru_core_news_lg")
+nlp = spacy.load("ru_core_news_md")
 
 
 @app.route("/", methods=["GET", "POST"])
