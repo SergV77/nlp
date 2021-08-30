@@ -3,3 +3,4 @@ Flask-Bootstrap
 Flask-Ext
 Flask-Markdown
 Flask-WTF
+Spacy
